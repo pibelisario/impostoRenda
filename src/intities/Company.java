@@ -22,10 +22,14 @@ public class Company extends General{
 
     @Override
     public double tax() {
-        if (employeNumber > 10){
+
+        return getEmployeNumber() > 10 ? (getAnnualIncome() * 0.14) : (getAnnualIncome() * 0.16);
+
+        /*if (employeNumber > 10){
             return super.getAnnualIncome() * 0.14;
         } else {
             return super.getAnnualIncome() * 0.16;
-        }
+        }*/
+
     }
 }

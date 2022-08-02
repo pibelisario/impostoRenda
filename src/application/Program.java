@@ -48,13 +48,17 @@ public class Program {
         }
 
         System.out.println();
-        System.out.println("TAXEX PAID: ");
+        System.out.println("TAXES PAID: ");
 
         double tot = 0;
         for (General g : list){
             System.out.println(g.getName() + ": $ " +String.format("%.2f", g.tax()));
+        }
+
+        for (General g : list){
             tot += g.tax();
         }
+
         System.out.println();
         System.out.println("TOTAL TAXES: $ " +String.format("%.2f", tot));
 
